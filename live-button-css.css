@@ -1,0 +1,102 @@
+
+    body{
+        cursor: url(01_watame_k.cur), default;
+    }
+    ul:hover{
+        cursor: url(01_watame_k.cur), default;
+    }
+    button div{
+        cursor: url(01_watame_pointer_k.cur), default;
+    }
+    a.live-a:hover{
+        text-decoration:none;
+    }
+    a:hover{
+        cursor: url(01_watame_pointer_k.cur), default;
+    }
+    div.video-box{
+        position: relative;
+        display:inline-block;
+        margin:30px;
+    }
+    div.video-img{
+        display:inline-block;
+        position: relative;
+        margin:0px auto;
+    }
+    div.vtuber-img{
+        display:inline-block;
+        position: absolute;
+        left: 170px;
+        bottom: -10px;
+
+    }
+    div.bell{
+        display:inline-block;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+    }
+    div.heart{
+        display:inline-block;
+        position: absolute;
+        right: 37px;
+        top: -5px;
+    }
+    div.video-title{
+        overflow: hidden;
+        max-width: 200px;
+        margin: 16px auto 5px;
+        width: 100%;
+        height: 35px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    div.continue-time{
+        margin: 3px 10px 5px;
+        text-align:center;
+        
+    }
+    div.in-how-long{
+        text-align:center;
+    }
+    img.remind-img{
+        -webkit-filter: drop-shadow(3px 3px 5px #000);
+        filter: drop-shadow(3px 3px 5px #000);
+    }
+    img.vedio-pic{
+        width: 230px;
+    }
+    img.vtuber-pic{
+        border-radius:50%;
+        width: 70px;
+        border: cornflowerblue;
+        border-style: solid;
+    }
+    
+    div#start-text{
+        position: relative;
+        left: -37px;
+        font-size: 25px;
+        font-family: cwTeXKai,Microsoft JhengHei;
+    }
+    div.skr{
+        background-color: aqua;
+        margin:0px;
+    }
+    #start-box{
+        animation-fill-mode: both;
+        position: absolute;
+        top:calc(50% - 200px);
+        left:calc(50% - 100px);
+    }
+    #peko{
+        animation-fill-mode: both;
+        position: absolute;
+        top:calc(50% - 200px);
+        left:calc(50% - 100px);
+    }
+    #start-box:hover{
+        -webkit-filter: drop-shadow(3px 3px 10px rgb(85, 84, 84));
+        filter: drop-shadow(3px 3px 10px rgb(85, 84, 84));
+    }
