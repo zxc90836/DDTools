@@ -1,0 +1,549 @@
+
+   ul{
+    padding-left: 0%;
+    z-index:1;
+  }
+  #maindiv div{
+    justify-content: space-around;
+    /*height:150px;*/
+  }
+
+  
+  li{
+      position: relative;
+      list-style:none;
+      animation-name:oxxo;
+      animation-duration:2s;
+      animation-timing-function: ease;
+      animation-direction:alternate;
+      background-color:#f5f5f5;
+      z-index:1;
+  }
+  button{
+    width:100%;
+    height: 50px;
+    padding:0%;
+    border: none;
+    background-color:#f5f5f5;
+    outline:0;
+    z-index:1;
+    outline: transparent;
+  }
+  .card button{
+    width:50%;
+    height: 50px;
+    padding:0%;
+    border: none;
+    color:white;
+    background-color:#7AD8EB;
+    outline:0;
+    z-index:1;
+    opacity: 80%;
+    /*display:block;*/
+    float: left;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .card button:hover{
+    opacity: 1;
+  }
+  .card a{
+    text-decoration: none;
+  }
+  .border {
+      display: inline-block;
+      width:20%;
+      height: 1000px;
+      /*margin: 3px;*/
+      background-color:#f5f5f5;
+      z-index: 0;
+    }
+  div.show{
+    width: 80%;
+    height: fit-content;
+    float: right;
+    background-color:rgb(187, 215, 224);
+    z-index: 8;
+  }
+  
+  #menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  span.basic{
+    font-size:larger;
+  }
+  span.blue-stronger{
+    font-size:xx-large;
+    color: #F8F7EF;
+  }
+  img.basic{
+    padding:10px;
+    width: 100%;
+    float: left;
+    z-index: -1;
+  }
+  img.personal{
+    /*padding:6px;*/
+    margin:6px;
+    margin-left: 30px;
+    width: 130px;
+    z-index: -1;
+    float: left;
+  }
+  span img.personal:hover{
+    transform:scale(1.2);
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .cardheader img.personal{
+    padding:15px;
+    width:300px;
+    float: left;
+    z-index: -1;
+  }
+  /*div.intro{
+      background-image:url( '' );
+      background-image:url(連結參考_files/hololive-image.jfif),default;
+      background-repeat:no-repeat;
+      background-color: lightblue;
+  }*/
+  span.list{
+    font-size: 20px;
+  }
+@keyframes oxxo{
+  from{
+    left:70px;
+    opacity:20%;
+  }
+  to{
+      left:0;
+      opacity:100%;
+  }
+}
+  .color-change{
+    animation-name:color-changemove;
+    animation-duration:0.6s;
+    background-color:#e0e0e0;
+    animation-fill-mode:both;
+  }
+  .color-changeb{
+    animation-name:color-changeback;
+    animation-duration:0.6s;
+    background-color:#f5f5f5;
+    animation-fill-mode:both;
+  }
+@keyframes color-changemove{
+  0% {
+    background-color:#f5f5f5;
+  }
+  100% {
+    background-color:#e0e0e0;
+  }
+}
+@keyframes color-changeback{
+  0% {
+    background-color:#e0e0e0;
+  }
+  100% {
+    background-color:#f5f5f5;
+  }
+}
+
+
+div.card {
+  position: absolute;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.card .cardheader {
+  background-color: #00a2ff;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+}
+
+div.card .cardbody {
+  padding: 10px;
+  color:#F8F7EF;
+}
+
+div.card {
+  width: 0px;
+  height: 0px;
+  background-color: #2FC2DF;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 0.6s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;  
+  animation-fill-mode: both;
+}
+
+@keyframes example {
+  0%   { left:20%; top:-200px;width:400px;height:322.5px;}
+  /*25% { left:45%; top:20%;width:300px;height:322.5px;}*/
+  55% { left:20%; top:20%;width:400px;height:322.5px;}
+  80% { left:20%; top:20%;width:65%;height:322.5px;}
+  99% { left:20%; top:20%;width:65%;height:396px;}
+  100% { left:20%; top:20%;width:65%;height:auto;}
+}
+
+.clearly{
+  opacity: 100% !important;
+}
+
+img#show-people{
+  clip-path: circle(80% at 50% 50%);
+  transition: clip-path .5s ease-in-out;
+  width:80%;
+}
+img#show-people.ina{
+  clip-path: circle(20% at 12% 30%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.kiara{
+  clip-path: circle(20% at 30% 20%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.gura{
+  clip-path: circle(20% at 50% 30%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.amelia{
+  clip-path: circle(20% at 70% 25%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.calli{
+  clip-path: circle(20% at 85% 30%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.azki{
+  clip-path: circle(20% at 14% 17%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.roboco{
+  clip-path: circle(20% at 33% 27%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.sora{
+  clip-path: circle(20% at 50% 30%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.miko{
+  clip-path: circle(20% at 65% 25%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.suisei{
+  clip-path: circle(20% at 85% 20%);
+  transition: clip-path .5s ease-in-out;
+}
+
+img#show-people.jp1g{
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 50%,
+    100% 100%,
+    0% 100%,
+    0% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.haato{
+  clip-path: polygon(
+    10% 0%,
+    35% 0%,
+    25% 50%,
+    35% 100%,
+    10% 100%,
+    0% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.mei{
+  clip-path: polygon(
+    25% 0%,
+    50% 0%,
+    40% 50%,
+    50% 100%,
+    25% 100%,
+    15% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.rose{
+  clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    70% 50%,
+    60% 100%,
+    40% 100%,
+    30% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.fubuki{
+  clip-path: polygon(
+    50% 0%,
+    75% 0%,
+    85% 50%,
+    75% 100%,
+    50% 100%,
+    60% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.matsuri{
+  clip-path: polygon(
+    65% 0%,
+    90% 0%,
+    100% 50%,
+    90% 100%,
+    65% 100%,
+    75% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.choco{
+  clip-path: circle(20% at 10% 35%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.aqua{
+  clip-path: circle(20% at 28% 40%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.subaru{
+  clip-path: circle(20% at 48% 20%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.ayame{
+  clip-path: circle(20% at 63% 34%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.shion{
+  clip-path: circle(20% at 85% 40%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.fubuki2{
+  clip-path: circle(20% at 18% 31%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.korone{
+  clip-path: circle(20% at 33% 68%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.okayu{
+  clip-path: circle(20% at 65% 68%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.mio{
+  clip-path: circle(20% at 84% 28%);
+  transition: clip-path .5s ease-in-out;
+}
+
+/*long square*/
+img#show-people.jp3g{
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    /*80% 50%,*/
+    100% 100%,
+    /*20% 100%,*/
+    0% 100%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.rushia{
+  clip-path: polygon(
+    0% 7%,
+    20% 7%,
+    /*80% 50%,*/
+    20% 92%,
+    /*20% 100%,*/
+    0% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.pekora{
+  clip-path: polygon(
+    20% 7%,
+    40% 7%,
+    /*80% 50%,*/
+    40% 92%,
+    /*20% 100%,*/
+    20% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.marine{
+  clip-path: polygon(
+    40% 7%,
+    60% 7%,
+    /*80% 50%,*/
+    60% 92%,
+    /*20% 100%,*/
+    40% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.noel{
+  clip-path: polygon(
+    60% 7%,
+    80% 7%,
+    /*80% 50%,*/
+    80% 92%,
+    /*20% 100%,*/
+    60% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.flare{
+  clip-path: polygon(
+    80% 7%,
+    100% 7%,
+    /*80% 50%,*/
+    100% 92%,
+    /*20% 100%,*/
+    80% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.luna{
+  clip-path: circle(20% at 10% 40%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.towa{
+  clip-path: circle(20% at 30% 35%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.kanata{
+  clip-path: circle(20% at 50% 35%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.coco{
+  clip-path: circle(20% at 62% 30%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.watame{
+  clip-path: circle(20% at 90% 30%);
+  transition: clip-path .5s ease-in-out;
+}
+
+img#show-people.jp5g{
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    /*80% 50%,*/
+    100% 100%,
+    /*20% 100%,*/
+    0% 100%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.lamy{
+  clip-path: polygon(
+    0% 7%,
+    20% 7%,
+    /*80% 50%,*/
+    20% 92%,
+    /*20% 100%,*/
+    0% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.nene{
+  clip-path: polygon(
+    20% 7%,
+    40% 7%,
+    /*80% 50%,*/
+    40% 92%,
+    /*20% 100%,*/
+    20% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.botan{
+  clip-path: polygon(
+    40% 7%,
+    60% 7%,
+    /*80% 50%,*/
+    60% 92%,
+    /*20% 100%,*/
+    40% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+
+img#show-people.polka{
+  clip-path: polygon(
+    80% 7%,
+    100% 7%,
+    /*80% 50%,*/
+    100% 92%,
+    /*20% 100%,*/
+    80% 92%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+
+img#show-people.id1g{
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 50%,/*80% 50%,*/
+    100% 100%,
+    0% 100%,/*20% 50%,*/
+    0% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.lofi{
+  clip-path: polygon(
+    20% 0%,
+    50% 0%,
+    40% 50%,
+    50% 100%,
+    20% 100%,
+    10% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.moona{
+  clip-path: polygon(
+    40% 0%,
+    60% 0%,
+    70% 50%,
+    60% 100%,
+    40% 100%,
+    30% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.risu{
+  clip-path: polygon(
+    50% 0%,
+    80% 0%,
+    90% 50%,
+    80% 100%,
+    50% 100%,
+    60% 50%
+  );
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.ollie{
+  clip-path: circle(20% at 30% 35%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.anya{
+  clip-path: circle(20% at 50% 68%);
+  transition: clip-path .5s ease-in-out;
+}
+img#show-people.reine{
+  clip-path: circle(20% at 65% 35%);
+  transition: clip-path .5s ease-in-out;
+}
