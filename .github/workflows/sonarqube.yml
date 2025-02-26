@@ -10,15 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: sonarsource/sonar-scanner-cli:latest
+    permissions:
+      contents: read
+      actions: write
+      checks: write
+      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
+      - name: Fix Permissions
+        run: |
+          sudo chown -R $(whoami) /__w
+
       - name: Run SonarQube Scanner
         run: |
           sonar-scanner \
