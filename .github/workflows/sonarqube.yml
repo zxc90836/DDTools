@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - feature/*
 
 jobs:
   sonarqube:
@@ -25,7 +24,6 @@ jobs:
       - name: Run SonarQube Scanner
         run: |
           sonar-scanner \
-            -Dsonar.projectKey=DDTools \
-            -Dsonar.branch.name=${{ github.ref_name }} \
+            -Dsonar.projectKey=github_DDTools \
             -Dsonar.host.url=https://zhao-chatops4msa-sonarqube.soselab.tw \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
