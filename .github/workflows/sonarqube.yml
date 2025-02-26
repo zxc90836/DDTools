@@ -1,9 +1,10 @@
 name: SonarQube Scan
 
 on:
-  pull_request:
+  push:
     branches:
       - main
+      - feature/*
 
 jobs:
   sonarqube:
@@ -18,21 +19,13 @@ jobs:
           unzip sonar-scanner-cli-5.0.1.3006-linux.zip
           sudo mv sonar-scanner-5.0.1.3006-linux /opt/sonar-scanner
           sudo ln -s /opt/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner
-          sudo chmod +x /usr/local/bin/sonar-scanner
           echo "/opt/sonar-scanner/bin" >> $GITHUB_PATH
           export PATH="/opt/sonar-scanner/bin:$PATH"
-
-      - name: Verify SonarScanner Installation
-        run: |
-          which sonar-scanner
-          sonar-scanner -h
 
       - name: Run SonarQube Scanner
         run: |
           sonar-scanner \
             -Dsonar.projectKey=DDTools \
-            -Dsonar.pullrequest.key=${{ github.event.pull_request.number }} \
-            -Dsonar.pullrequest.branch=${{ github.head_ref }} \
-            -Dsonar.pullrequest.base=${{ github.base_ref }} \
+            -Dsonar.branch.name=${{ github.ref_name }} \
             -Dsonar.host.url=https://zhao-chatops4msa-sonarqube.soselab.tw \
             -Dsonar.token=${{ secrets.SONAR_TOKEN }}
