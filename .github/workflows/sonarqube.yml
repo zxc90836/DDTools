@@ -1,0 +1,29 @@
+name: SonarQube Scan
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Run SonarQube Scanner
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=github_DDTools \
+            -Dsonar.pullrequest.key=${{ github.event.pull_request.number }} \
+            -Dsonar.pullrequest.branch=${{ github.head_ref }} \
+            -Dsonar.pullrequest.base=${{ github.base_ref }} \
+            -Dsonar.host.url=https://zhao-chatops4msa-sonarqube.soselab.tw \
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }}
