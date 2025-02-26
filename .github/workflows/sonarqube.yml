@@ -8,20 +8,16 @@ on:
 jobs:
   sonarqube:
     runs-on: ubuntu-latest
-    container:
-      image: sonarsource/sonar-scanner-cli:latest
-    permissions:
-      contents: read
-      actions: write
-      checks: write
-      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Fix Permissions
+      - name: Install SonarScanner
         run: |
-          sudo chown -R $(whoami) /__w
+          wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+          unzip sonar-scanner-cli-5.0.1.3006-linux.zip
+          sudo mv sonar-scanner-5.0.1.3006-linux /opt/sonar-scanner
+          echo "export PATH=/opt/sonar-scanner/bin:$PATH" >> $GITHUB_ENV
 
       - name: Run SonarQube Scanner
         run: |
